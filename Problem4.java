@@ -33,18 +33,21 @@ public class Problem4 {
             inp = scanner.nextLine();
 
         }
-
+//2, 0, 9, 6, 5, 4, 1, 3
     }
     public static int findMissingNumber(List<Integer> numbers){
 
         int n = numbers.size();
+        System.out.println(n);
 
         for(int i = 0; i < n; i++){
             if(numbers.get(i) > 0 && numbers.get(i) <= n){
                 numbers.set(numbers.get(i) - 1, -1);
+//                System.out.println(numbers.get(i) - 1);
+//                System.out.println(numbers.get(i-1));
             }
         }
-
+        System.out.println(numbers);
         // Find the first index where the number is not negative.
         for (int i = 0; i < n; i++) {
             if (numbers.get(i) > 0) {
